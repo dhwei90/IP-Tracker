@@ -1,21 +1,21 @@
 # IP-Tracker
 
 ## How does your code work?
-The method `requestHandled(String ipAddress)` accepts an IP address and stores in a `HashMap` this IP address and its request count.
-The method `top100()` returns a list of top 100 IP addresses with the greatest request count, displayed in decreasing order of request count, implemented using a `PriorityQueue`.
-The method `clear()` clears all IP addresses and tallies in the `HashMap`
+- The method `requestHandled(String ipAddress)` accepts an IP address and stores in a `HashMap` this IP address and its request count.
+- The method `top100()` returns a list of top 100 IP addresses with the greatest request count, displayed in decreasing order of request count, implemented using a `PriorityQueue`.
+- The method `clear()` clears all IP addresses and tallies in the `HashMap`
 
 ## Why did you choose this approach?
-A `HashMap` provides O(1) find and insert operations and is suited for storing and tracking the request count.
-A `PriorityQueue` provides efficient O(log (n)) time insertion and removal in an ordered collection.
+- A `HashMap` provides O(1) find and insert operations and is suited for storing and tracking the request count.
+- A `PriorityQueue` provides efficient O(log (n)) time insertion and removal in an ordered collection.
 
 ## What other approaches did you decide not to pursue?
 I also considered storing the IP request counts in a list and sorting it before returning the top 100, however this would be less efficient than using a `PriorityQueue` given the time complexity would be O(n*\log(n)) where n is the number of total IP addresses seen.
 
 ## What is the runtime complexity of each function?
-`requestHandled(String ipAddress)`: O(1)
-`top100()`: O(n\*log(100))
-`clear()`: O(n)
+- `requestHandled(String ipAddress)`: O(1)
+- `top100()`: O(n\*log(100))
+- `clear()`: O(n)
 where n is the number of total IP addresses seen
 
 ## How would you test this?
