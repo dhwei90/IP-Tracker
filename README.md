@@ -32,7 +32,7 @@ We can test this program by providing sample IP addresses and have the program p
 		tracker.requestHandled("4.4.4.4");
 		tracker.requestHandled("4.4.4.4");
 		tracker.requestHandled("4.4.4.4");
-		tracker.requestHandled("ip4");
+		tracker.requestHandled("4.4.4.4");
 		System.out.println(tracker.top100().toString());
 	}
-  `//[4.4.4.4, 3.3.3.3, 2.2.2.2, 1.1.1.1]`
+  	//[4.4.4.4, 3.3.3.3, 2.2.2.2, 1.1.1.1]
