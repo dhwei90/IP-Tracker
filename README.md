@@ -10,13 +10,13 @@
 - A `PriorityQueue` provides efficient O(log (n)) time insertion and removal in an ordered collection.
 
 ## What other approaches did you decide not to pursue?
-I also considered storing the IP request counts in a list and sorting it before returning the top 100, however this would be less efficient than using a `PriorityQueue` given the time complexity would be O(n*\log(n)) where n is the number of total IP addresses seen.
+I also considered storing the IP request counts in a list and sorting it before returning the top 100, however this would be less efficient than using a `PriorityQueue` given the time complexity would be O(n\*log(n)) where n is the number of total IP addresses seen.
 
 ## What is the runtime complexity of each function?
+With n the number of total IP addresses seen:
 - `requestHandled(String ipAddress)`: O(1)
 - `top100()`: O(n\*log(100))
 - `clear()`: O(n)
-where n is the number of total IP addresses seen
 
 ## How would you test this?
 We can test this program by providing sample IP addresses and have the program print out the list of top IP addresses. An example is shown below:
